@@ -19,7 +19,7 @@ const BOT_CHANNEL = process.env.BOT_CHANNEL;
 const MESSAGE_RESPONSE = ["Pito todos🍆", "A lamidas😜", "Pito`(¬‿¬)`", "Nyaaa`╰(*°▽°*)╯`"];
 function gotMessage(message) {
     console.log("New Message📰", message);
-    if ((message.content.match(/([a-z])hupan+/)) && message.channel.id === BOT_CHANNEL) {
+    if (message.content.match(/([a-z])hupas+/)||message.content.match(/([a-z])hupan+/)) {
         //message.reply("pito 7u7");
         let randomIndex = Math.floor(Math.random() * MESSAGE_RESPONSE.length);
         message.channel.send(MESSAGE_RESPONSE[randomIndex]);
